@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf7f1;
+  --foreground: #211d17;
+
+  /* Elk Island earth-tone palette */
+  --color-forest: #2f3b2a;
+  --color-forest-light: #4a5a3f;
+  --color-lake: #2d4b52;
+  --color-lake-light: #4d7a82;
+  --color-sand: #ddc9a3;
+  --color-sand-light: #efe4cb;
+  --color-clay: #a85d33;
+  --color-clay-light: #c98552;
+  --color-cream: #faf7f1;
+  --color-charcoal: #211d17;
+  --color-stone: #6b6457;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-forest: var(--color-forest);
+  --color-forest-light: var(--color-forest-light);
+  --color-lake: var(--color-lake);
+  --color-lake-light: var(--color-lake-light);
+  --color-sand: var(--color-sand);
+  --color-sand-light: var(--color-sand-light);
+  --color-clay: var(--color-clay);
+  --color-clay-light: var(--color-clay-light);
+  --color-cream: var(--color-cream);
+  --color-charcoal: var(--color-charcoal);
+  --color-stone: var(--color-stone);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
