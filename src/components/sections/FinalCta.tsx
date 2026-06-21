@@ -18,9 +18,6 @@ export default function FinalCta() {
         <div className="mt-9 flex justify-center">
           <WaitlistForm />
         </div>
-        <p className="mt-5 text-sm text-cream/60">
-          Made in Canada · No spam, just launch news
-        </p>
       </div>
     </section>
   );
