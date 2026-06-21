@@ -21,8 +21,8 @@ export default function WhyElkIsland() {
             Elk Island National Park, Alberta
           </div>
           <h2 className="font-display text-4xl font-semibold leading-tight text-charcoal sm:text-5xl">
-            A landscape worth
-            <br /> tracing in thread.
+            We drew the pattern
+            <br /> straight from the park.
           </h2>
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone">
             <p>
@@ -33,17 +33,16 @@ export default function WhyElkIsland() {
               by time.
             </p>
             <p>
-              It&rsquo;s a small park with an outsized sense of place — the
-              kind of landscape that doesn&rsquo;t need to be big to leave a
-              mark on you. That&rsquo;s exactly why it became the first
-              chapter in the TRAKK story.
+              The pattern is a simple map of Elk Island. The blue shapes are
+              the park&rsquo;s lakes and ponds, Astotin and all the little ones,
+              laid out roughly where you&rsquo;d find them on the map.
             </p>
             <p>
-              Every line in The Elk Island Sock&rsquo;s pattern is drawn from
-              that landscape: the tree line at dusk, the still water of
-              Astotin Lake, and the bison that have called this place home for
-              generations. It&rsquo;s artwork built from a real place, made to
-              go with you to the next one.
+              We spent a summer running and hiking the trails out here, crossing
+              each one off the map as we finished it, and this is the version of
+              the park we wanted to carry around. It&rsquo;s a small place just
+              east of Edmonton, but it doesn&rsquo;t take long to forget
+              you&rsquo;re anywhere near a city. That&rsquo;s where TRAKK started.
             </p>
           </div>
         </div>

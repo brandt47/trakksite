@@ -12,9 +12,8 @@ export default function FinalCta() {
           Take a piece of Elk Island with you.
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-cream/80">
-          Wherever the trail leads next — a city block, a summit, or a quiet
-          lake of your own — go there with a little more curiosity, and a
-          sock built to keep up.
+          Wherever you&rsquo;re headed next, take a sock that can keep up and
+          a little more curiosity with you.
         </p>
         <div className="mt-9 flex justify-center">
           <a

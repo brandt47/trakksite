@@ -12,8 +12,7 @@ export default function Footer() {
           className="h-10 w-10"
         />
         <p className="text-sm">
-          Technical outdoor socks inspired by Canada&rsquo;s most beautiful
-          landscapes.
+          Outdoor socks inspired by the wild places in our own backyard.
         </p>
         <p className="text-xs text-cream/50">
           &copy; {new Date().getFullYear()} TRAKK. Made in Canada.

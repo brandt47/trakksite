@@ -13,9 +13,6 @@ export default function Nav() {
             className="h-12 w-12"
             priority
           />
-          <span className="hidden border-l border-cream/20 pl-3 text-xs font-medium uppercase tracking-wide text-cream/70 sm:inline">
-            Designed in Edmonton
-          </span>
         </a>
         <nav className="hidden items-center gap-8 text-sm font-medium text-cream/90 md:flex">
           <a href="#why-elk-island" className="transition hover:text-white">

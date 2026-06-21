@@ -17,23 +17,23 @@ export default function MeetJack() {
             <p>
               Jack is an orange cat. He has never climbed a mountain or
               finished a marathon. Most of his exploring happens from a
-              windowsill, a porch step, or — more often than we&rsquo;d like
-              to admit — the middle of a keyboard during a design review.
+              windowsill, a porch step, or (more often than we&rsquo;d like to
+              admit) the middle of a keyboard during a design review.
             </p>
             <p>
-              But Jack approaches the world the way every adventurer should:
-              with endless curiosity. He inspects new gear before it leaves
-              the house. He watches the birds outside like they&rsquo;re the
-              main event. He supervises product sketches with the quiet
-              confidence of someone who is definitely in charge.
+              He comes along on the easy hikes. His favourite part is the drive
+              in, when the bison are grazing right beside the road and he sits
+              up in the window to watch them. The rest of the time he inspects
+              new gear before it leaves the house and supervises product
+              sketches with the quiet confidence of someone who is definitely
+              in charge.
             </p>
             <p>
-              That curiosity — not credentials, not summits — became the
-              foundation for TRAKK. You don&rsquo;t need to be an elite
-              athlete to want to know what&rsquo;s over the next hill. You
-              just need to be curious enough to go look. Jack reminded us of
-              that, and every sock we make carries a bit of his spirit along
-              for the trip.
+              That curiosity, not credentials and not summits, became the
+              foundation for TRAKK. You don&rsquo;t need to be an elite athlete
+              to want to know what&rsquo;s over the next hill. You just need to
+              be curious enough to go look. Jack reminded us of that, and every
+              sock we make carries a bit of his spirit along for the trip.
             </p>
           </div>
         </div>

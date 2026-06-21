@@ -18,9 +18,9 @@ export default function Hero() {
             <br className="hidden sm:block" /> wherever you go.
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-cream/85">
-            The Elk Island Sock is our first release — a technical merino
-            sock inspired by the rolling forests and quiet lakes of Elk
-            Island National Park, Alberta.
+            Meet the Elk Island Sock, our very first pair. A technical merino
+            sock inspired by the rolling forests and quiet lakes of Elk Island
+            National Park, right here in Alberta.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="overflow-hidden rounded-3xl bg-cream shadow-2xl">
             <Image
               src="/images/elk-island-sock-design.png"
-              alt="The Elk Island Sock — front and back, left and right"
+              alt="The Elk Island Sock, front and back, left and right"
               width={513}
               height={412}
               className="w-full"

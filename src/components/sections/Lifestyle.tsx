@@ -29,10 +29,10 @@ export default function Lifestyle() {
       <div className="mx-auto max-w-7xl px-6 sm:px-10">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sand">
-            Wherever the day takes you
+            Wherever Jack goes
           </p>
           <h2 className="mt-4 font-display text-4xl font-semibold text-cream sm:text-5xl">
-            One sock, every adventure.
+            One sock that does most of it.
           </h2>
         </div>
 

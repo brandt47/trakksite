@@ -10,9 +10,9 @@ import {
 const features = [
   {
     icon: IconCuff,
-    title: "Cuff-Up Technology",
+    title: "A stay-put cuff",
     description:
-      "An engineered cuff that stays put through every stride, mile, and boot break-in — no slipping, no bunching.",
+      "Stays put when everything else is sliding down into your boot. No bunching at the heel.",
   },
   {
     icon: IconDroplet,
@@ -42,7 +42,7 @@ const features = [
     icon: IconWool,
     title: "Merino Wool Blend",
     description:
-      "67% merino wool for natural temperature regulation, softness, and odor resistance — wear it again and again.",
+      "67% merino wool, naturally odor-resistant, so you can wear it again and again.",
   },
 ];
 
@@ -52,15 +52,14 @@ export default function Features() {
       <div className="mx-auto max-w-7xl px-6 sm:px-10">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sand">
-            Built for the long way round
+            What&rsquo;s actually in the sock
           </p>
           <h2 className="mt-4 font-display text-4xl font-semibold text-cream sm:text-5xl">
-            Technical performance, trail to street.
+            Built to hold up, comfortable enough to forget about.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-cream/75">
-            The Elk Island Sock is engineered for runners, hikers, travelers,
-            and everyday adventurers — comfortable enough for daily wear,
-            capable enough for long days on the trail.
+            Made for long days on the trail and the walk to get coffee the
+            next morning. Most of us wear ours for both.
           </p>
         </div>
 

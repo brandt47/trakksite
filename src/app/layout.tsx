@@ -14,9 +14,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "TRAKK — The Elk Island Sock",
+  title: "TRAKK | The Elk Island Sock",
   description:
-    "TRAKK makes technical outdoor socks inspired by Canada's most beautiful landscapes. The Elk Island Sock is our first release — a tribute to Alberta's treasured wild places.",
+    "TRAKK makes technical outdoor socks, designed in Edmonton and made in Canada. The Elk Island Sock is our first release, inspired by Elk Island National Park in Alberta.",
 };
 
 export default function RootLayout({

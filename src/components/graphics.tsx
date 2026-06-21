@@ -3,7 +3,7 @@ type GraphicProps = {
 };
 
 /**
- * Layered SVG scene standing in for landscape photography of Elk Island —
+ * Layered SVG scene standing in for landscape photography of Elk Island:
  * lake, aspen parkland, rolling hills, and a wood bison silhouette.
  */
 export function ElkIslandScene({ className }: GraphicProps) {
