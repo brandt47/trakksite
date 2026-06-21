@@ -18,21 +18,40 @@ export async function POST(request: Request) {
     );
   }
 
-  const response = await fetch(
+  const headers = {
+    "Content-Type": "application/json",
+    "X-Kit-Api-Key": apiKey,
+  };
+
+  // Kit's "add subscriber to form" endpoint 404s unless the subscriber
+  // already exists, so create them first, then attach them to the form.
+  const createResponse = await fetch("https://api.kit.com/v4/subscribers", {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ email_address: email }),
+  });
+
+  if (!createResponse.ok) {
+    const body = await createResponse.json().catch(() => null);
+    console.error("Kit create subscriber failed:", createResponse.status, body);
+    return Response.json(
+      { error: "Could not join the waitlist. Please try again." },
+      { status: 502 },
+    );
+  }
+
+  const formResponse = await fetch(
     `https://api.kit.com/v4/forms/${formId}/subscribers`,
     {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-Kit-Api-Key": apiKey,
-      },
+      headers,
       body: JSON.stringify({ email_address: email }),
     },
   );
 
-  if (!response.ok) {
-    const body = await response.json().catch(() => null);
-    console.error("Kit subscribe failed:", response.status, body);
+  if (!formResponse.ok) {
+    const body = await formResponse.json().catch(() => null);
+    console.error("Kit add to form failed:", formResponse.status, body);
     return Response.json(
       { error: "Could not join the waitlist. Please try again." },
       { status: 502 },

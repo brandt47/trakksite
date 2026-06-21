@@ -38,8 +38,7 @@ export default function WaitlistForm() {
   if (submitted) {
     return (
       <p className="font-display text-lg text-cream">
-        You&rsquo;re on the list. We&rsquo;ll email you the moment the Elk
-        Island Sock is ready to ship.
+        You&rsquo;re on the list. Welcome aboard.
       </p>
     );
   }
