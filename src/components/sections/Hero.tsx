@@ -20,8 +20,7 @@ export default function Hero() {
           <p className="mt-6 max-w-md text-lg leading-relaxed text-cream/85">
             Meet the Elk Island Sock, our very first pair. A technical merino
             sock inspired by the rolling forests and quiet lakes of Elk Island
-            National Park, right here in Alberta. Not on shelves yet &mdash;
-            join the waitlist to be first in line.
+            National Park. Join the waitlist to be first in line!
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
