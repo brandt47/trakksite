@@ -1,4 +1,5 @@
-import { ElkIslandScene, SockIllustration } from "@/components/graphics";
+import Image from "next/image";
+import { ElkIslandScene } from "@/components/graphics";
 import { IconArrowRight } from "@/components/icons";
 
 export default function Hero() {
@@ -10,7 +11,7 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pt-36 pb-20 sm:px-10 sm:pt-44 sm:pb-28 lg:grid-cols-2 lg:gap-8">
         <div className="text-cream">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-sand">
-            TRAKK · Made in Canada
+            TRAKK · Designed in Edmonton
           </p>
           <h1 className="font-display text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
             Wear a piece of the wild,
@@ -36,27 +37,22 @@ export default function Hero() {
               Discover the story
             </a>
           </div>
-          <dl className="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-cream/15 pt-6 text-cream/90">
-            <div>
-              <dt className="text-xs uppercase tracking-wide text-sand">Wool</dt>
-              <dd className="font-display text-xl font-semibold">67%</dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wide text-sand">Origin</dt>
-              <dd className="font-display text-xl font-semibold">Canada</dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wide text-sand">Inspired by</dt>
-              <dd className="font-display text-xl font-semibold">Elk Island</dd>
-            </div>
-          </dl>
         </div>
 
-        <div className="relative mx-auto w-full max-w-sm lg:max-w-md">
+        <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
           <div className="absolute -inset-10 -z-10 rounded-full bg-sand/10 blur-3xl" />
-          <SockIllustration className="w-full drop-shadow-2xl" />
+          <div className="overflow-hidden rounded-3xl bg-cream shadow-2xl">
+            <Image
+              src="/images/elk-island-sock-design.png"
+              alt="The Elk Island Sock — front and back, left and right"
+              width={513}
+              height={412}
+              className="w-full"
+              priority
+            />
+          </div>
           <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-cream/60">
-            The Elk Island Sock — product photography coming soon
+            The Elk Island Sock
           </p>
         </div>
       </div>

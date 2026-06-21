@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { IconPaw } from "@/components/icons";
 
 export default function MeetJack() {
@@ -38,13 +39,14 @@ export default function MeetJack() {
         </div>
 
         <div className="relative mx-auto w-full max-w-md">
-          <div className="aspect-square overflow-hidden rounded-3xl bg-gradient-to-br from-sand-light to-clay-light/40 shadow-lg">
-            <div className="flex h-full w-full flex-col items-center justify-center gap-3 text-clay/70">
-              <IconPaw className="h-16 w-16" />
-              <p className="px-8 text-center text-sm font-medium uppercase tracking-wide text-stone">
-                Photo placeholder — Jack, on duty
-              </p>
-            </div>
+          <div className="aspect-square overflow-hidden rounded-3xl shadow-lg">
+            <Image
+              src="/images/jack.png"
+              alt="Jack, an orange cat, riding along on a trail"
+              width={600}
+              height={600}
+              className="h-full w-full object-cover"
+            />
           </div>
           <div className="absolute -bottom-5 -left-5 rounded-2xl bg-charcoal px-5 py-3 text-cream shadow-lg">
             <p className="font-display text-sm font-semibold">Jack</p>

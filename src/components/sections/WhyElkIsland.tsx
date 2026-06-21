@@ -1,4 +1,4 @@
-import { ElkIslandScene } from "@/components/graphics";
+import Image from "next/image";
 import { IconMapPin } from "@/components/icons";
 
 export default function WhyElkIsland() {
@@ -6,7 +6,12 @@ export default function WhyElkIsland() {
     <section id="why-elk-island" className="relative bg-cream py-24 sm:py-32">
       <div className="mx-auto grid max-w-7xl gap-14 px-6 sm:px-10 lg:grid-cols-2 lg:items-center lg:gap-20">
         <div className="relative order-2 aspect-[4/5] overflow-hidden rounded-3xl bg-forest lg:order-1">
-          <ElkIslandScene className="absolute inset-0 h-full w-full" />
+          <Image
+            src="/images/realelkisland.jpg"
+            alt="Sunset over Astotin Lake, Elk Island National Park, Alberta"
+            fill
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/30 via-transparent to-transparent" />
         </div>
 

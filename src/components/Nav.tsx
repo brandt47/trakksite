@@ -1,13 +1,20 @@
-import { IconMaple } from "@/components/icons";
+import Image from "next/image";
 
 export default function Nav() {
   return (
     <header className="absolute top-0 z-30 w-full">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 sm:px-10">
-        <a href="#" className="flex items-center gap-2 text-cream">
-          <IconMaple className="h-6 w-6" />
-          <span className="font-display text-xl font-semibold tracking-wide">
-            TRAKK
+        <a href="#" className="flex items-center gap-3">
+          <Image
+            src="/images/trakk-logo.png"
+            alt="TRAKK"
+            width={349}
+            height={301}
+            className="h-12 w-12"
+            priority
+          />
+          <span className="hidden border-l border-cream/20 pl-3 text-xs font-medium uppercase tracking-wide text-cream/70 sm:inline">
+            Designed in Edmonton
           </span>
         </a>
         <nav className="hidden items-center gap-8 text-sm font-medium text-cream/90 md:flex">
