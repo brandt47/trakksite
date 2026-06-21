@@ -20,14 +20,15 @@ export default function Hero() {
           <p className="mt-6 max-w-md text-lg leading-relaxed text-cream/85">
             Meet the Elk Island Sock, our very first pair. A technical merino
             sock inspired by the rolling forests and quiet lakes of Elk Island
-            National Park, right here in Alberta.
+            National Park, right here in Alberta. Not on shelves yet &mdash;
+            join the waitlist to be first in line.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
-              href="#shop"
+              href="#waitlist"
               className="group inline-flex items-center gap-2 rounded-full bg-clay px-7 py-3.5 text-sm font-semibold text-cream transition hover:bg-clay-light"
             >
-              Shop The Elk Island Sock
+              Join the Waitlist
               <IconArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
             </a>
             <a
