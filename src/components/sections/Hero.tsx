@@ -31,7 +31,7 @@ export default function Hero() {
               <IconArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
             </a>
             <a
-              href="#why-elk-island"
+              href="/our-story"
               className="text-sm font-semibold text-cream/90 underline-offset-4 transition hover:text-white hover:underline"
             >
               Discover the story

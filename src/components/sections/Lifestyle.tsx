@@ -27,16 +27,7 @@ export default function Lifestyle() {
   return (
     <section className="bg-lake py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 sm:px-10">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sand">
-            Wherever Jack goes
-          </p>
-          <h2 className="mt-4 font-display text-4xl font-semibold text-cream sm:text-5xl">
-            One sock that does most of it.
-          </h2>
-        </div>
-
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {scenes.map(({ title, description, image }) => (
             <div
               key={title}

@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { IconMaple } from "@/components/icons";
 
 const siteLinks = [
-  { href: "/#why-elk-island", label: "The Place" },
-  { href: "/#features", label: "The Sock" },
-  { href: "/#made-in-canada", label: "Made in Canada" },
-  { href: "/#meet-jack", label: "Meet Jack" },
+  { href: "/our-story", label: "Our Story" },
+  { href: "/the-sock", label: "The Sock" },
+  { href: "/made-in-canada", label: "Made in Canada" },
+  { href: "/lifestyle", label: "Lifestyle" },
 ];
 
 export default function Footer() {
@@ -40,9 +41,9 @@ export default function Footer() {
               <ul className="mt-4 space-y-2.5 text-sm">
                 {siteLinks.map(({ href, label }) => (
                   <li key={href}>
-                    <a href={href} className="transition hover:text-clay-light">
+                    <Link href={href} className="transition hover:text-clay-light">
                       {label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -54,7 +55,7 @@ export default function Footer() {
               </h3>
               <ul className="mt-4 space-y-2.5 text-sm">
                 <li>
-                  <a href="/#waitlist" className="transition hover:text-clay-light">
+                  <a href="#waitlist" className="transition hover:text-clay-light">
                     Join the Waitlist
                   </a>
                 </li>
@@ -66,9 +67,9 @@ export default function Footer() {
         <div className="mt-14 flex flex-col items-center gap-4 border-t border-cream/10 pt-8 text-xs text-cream/40 sm:flex-row sm:justify-between">
           <p>&copy; {new Date().getFullYear()} TRAKK. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="/privacy-policy" className="transition hover:text-cream/70">
+            <Link href="/privacy-policy" className="transition hover:text-cream/70">
               Privacy Policy
-            </a>
+            </Link>
             <p>Made in Canada, worn everywhere.</p>
           </div>
         </div>

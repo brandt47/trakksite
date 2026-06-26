@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | TRAKK",
@@ -174,20 +175,10 @@ export default function PrivacyPolicyPage() {
     <div className="flex flex-1 flex-col">
       <Nav />
       <main className="flex flex-1 flex-col">
-        <section className="relative isolate overflow-hidden bg-forest">
-          <div className="absolute inset-0 bg-linear-to-b from-charcoal/70 via-charcoal/50 to-forest" />
-          <div className="relative mx-auto max-w-3xl px-6 pt-36 pb-16 text-center sm:px-10 sm:pt-44 sm:pb-20">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-sand">
-              TRAKK
-            </p>
-            <h1 className="font-display text-4xl font-semibold leading-tight text-cream sm:text-5xl">
-              Privacy Policy
-            </h1>
-            <p className="mt-4 text-sm text-cream/70">
-              Effective date: June 21, 2026
-            </p>
-          </div>
-        </section>
+        <PageHero
+          title="Privacy Policy"
+          description="Effective date: June 21, 2026"
+        />
 
         <section className="bg-cream py-16 sm:py-20">
           <div className="mx-auto max-w-3xl space-y-12 px-6 sm:px-10">
