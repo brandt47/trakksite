@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import CartButton from "@/components/CartButton";
 
 const navLinks = [
+  { href: "/shop", label: "Shop" },
   { href: "/our-story", label: "Our Story" },
   { href: "/the-sock", label: "The Sock" },
   { href: "/made-in-canada", label: "Made in Canada" },
@@ -29,12 +31,15 @@ export default function Nav() {
             </Link>
           ))}
         </nav>
-        <a
-          href="#waitlist"
-          className="rounded-full bg-cream px-5 py-2.5 text-sm font-semibold text-charcoal transition hover:bg-white"
-        >
-          Join the Waitlist
-        </a>
+        <div className="flex items-center gap-2">
+          <CartButton />
+          <a
+            href="#waitlist"
+            className="rounded-full bg-cream px-5 py-2.5 text-sm font-semibold text-charcoal transition hover:bg-white"
+          >
+            Join the Waitlist
+          </a>
+        </div>
       </div>
     </header>
   );

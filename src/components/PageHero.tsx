@@ -2,12 +2,14 @@ type PageHeroProps = {
   eyebrow?: string;
   title: React.ReactNode;
   description?: string;
+  cta?: React.ReactNode;
 };
 
 export default function PageHero({
   eyebrow = "TRAKK",
   title,
   description,
+  cta,
 }: PageHeroProps) {
   return (
     <section className="relative isolate overflow-hidden bg-forest">
@@ -24,6 +26,7 @@ export default function PageHero({
             {description}
           </p>
         )}
+        {cta && <div className="mt-8 flex justify-center">{cta}</div>}
       </div>
     </section>
   );

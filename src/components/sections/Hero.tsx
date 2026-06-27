@@ -14,8 +14,7 @@ export default function Hero() {
             TRAKK · Designed in Edmonton
           </p>
           <h1 className="font-display text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
-            Wear a piece of the wild,
-            <br className="hidden sm:block" /> wherever you go.
+            Land on your feet.
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-cream/85">
             Meet the Elk Island Sock, our very first pair. A technical merino

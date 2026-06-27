@@ -3,6 +3,7 @@ import Link from "next/link";
 import { IconMaple } from "@/components/icons";
 
 const siteLinks = [
+  { href: "/shop", label: "Shop" },
   { href: "/our-story", label: "Our Story" },
   { href: "/the-sock", label: "The Sock" },
   { href: "/made-in-canada", label: "Made in Canada" },
