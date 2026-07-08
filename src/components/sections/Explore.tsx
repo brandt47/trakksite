@@ -4,24 +4,11 @@ import { IconArrowRight } from "@/components/icons";
 
 const destinations = [
   {
-    title: "The Sock",
-    description:
-      "Merino wool, reinforced heel and toe, a cuff that actually stays put.",
-    href: "/the-sock",
-    image: "/images/elk-island-sock-design.png",
-  },
-  {
     title: "Our Story",
     description:
       "Why a national park east of Edmonton became the pattern on your foot.",
     href: "/our-story",
     image: "/images/realelkisland.jpg",
-  },
-  {
-    title: "Made in Canada",
-    description: "Designed in Edmonton, knit in British Columbia.",
-    href: "/made-in-canada",
-    image: "/images/jackoutsidefancybuilding.jpg",
   },
   {
     title: "Lifestyle",
@@ -44,7 +31,7 @@ export default function Explore() {
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2">
           {destinations.map(({ title, description, href, image }) => (
             <Link
               key={title}

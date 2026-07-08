@@ -21,35 +21,42 @@ export default function AddToCartForm({ product }: { product: Product }) {
     setTimeout(() => setAdded(false), 2000);
   }
 
+  // Shopify creates a placeholder "Default Title" variant when a product has no
+  // real options. Don't render the picker in that case.
+  const hasRealOptions = !(
+    product.variants.length === 1 && product.variants[0].title === "Default Title"
+  );
+
   return (
     <div className="mt-8">
-      {product.options.map((option) => (
-        <div key={option.name} className="mb-5">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-sand">
-            {option.name}
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {product.variants.map((v) => (
-              <button
-                key={v.id}
-                type="button"
-                onClick={() => setVariantId(v.id)}
-                disabled={!v.available}
-                className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
-                  v.id === variantId
-                    ? "border-clay bg-clay text-cream"
-                    : "border-cream/30 text-cream/80 hover:border-cream/60"
-                } disabled:cursor-not-allowed disabled:opacity-40`}
-              >
-                {v.title}
-              </button>
-            ))}
+      {hasRealOptions &&
+        product.options.map((option) => (
+          <div key={option.name} className="mb-5">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-sand">
+              {option.name}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {product.variants.map((v) => (
+                <button
+                  key={v.id}
+                  type="button"
+                  onClick={() => setVariantId(v.id)}
+                  disabled={!v.available}
+                  className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
+                    v.id === variantId
+                      ? "border-clay bg-clay text-cream"
+                      : "border-cream/30 text-cream/80 hover:border-cream/60"
+                  } disabled:cursor-not-allowed disabled:opacity-40`}
+                >
+                  {v.title}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
 
-      <div className="flex flex-wrap items-center gap-4">
-        <div className="flex items-center rounded-full border border-cream/30">
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+        <div className="flex items-center self-start rounded-full border border-cream/30">
           <button
             type="button"
             onClick={() => setQuantity((q) => Math.max(1, q - 1))}
@@ -75,7 +82,7 @@ export default function AddToCartForm({ product }: { product: Product }) {
           type="button"
           onClick={handleAddToCart}
           disabled={!variant?.available}
-          className="inline-flex flex-1 items-center justify-center rounded-full bg-clay px-7 py-3.5 text-sm font-semibold text-cream transition hover:bg-clay-light disabled:cursor-not-allowed disabled:opacity-50 sm:flex-none"
+          className="inline-flex w-full items-center justify-center rounded-full bg-clay px-7 py-3.5 text-sm font-semibold text-cream transition hover:bg-clay-light disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
         >
           {added ? "Added!" : variant?.available ? "Add to Cart" : "Sold Out"}
         </button>

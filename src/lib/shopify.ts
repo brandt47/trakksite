@@ -82,7 +82,7 @@ const PRODUCT_FIELDS = `
   id handle title description availableForSale
   priceRange { minVariantPrice { amount currencyCode } }
   compareAtPriceRange { minVariantPrice { amount currencyCode } }
-  images(first: 5) { edges { node { url altText } } }
+  images(first: 20) { edges { node { url altText } } }
   options { name values }
   variants(first: 20) {
     edges {

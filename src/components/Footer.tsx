@@ -5,8 +5,6 @@ import { IconMaple } from "@/components/icons";
 const siteLinks = [
   { href: "/shop", label: "Shop" },
   { href: "/our-story", label: "Our Story" },
-  { href: "/the-sock", label: "The Sock" },
-  { href: "/made-in-canada", label: "Made in Canada" },
   { href: "/lifestyle", label: "Lifestyle" },
 ];
 
@@ -70,6 +68,9 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className="transition hover:text-cream/70">
               Privacy Policy
+            </Link>
+            <Link href="/terms-of-service" className="transition hover:text-cream/70">
+              Terms of Service
             </Link>
             <p>Made in Canada, worn everywhere.</p>
           </div>

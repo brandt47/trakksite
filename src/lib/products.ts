@@ -38,8 +38,25 @@ export type Product = {
   available: boolean;
 };
 
-// Marketing copy that lives in the frontend rather than Shopify.
-// Add entries here as new products are created in Shopify admin.
+/**
+ * Frontend marketing copy keyed by Shopify product handle.
+ *
+ * When you publish a new product in Shopify admin, add an entry here.
+ * The handle is the URL slug shown in the Shopify admin URL, e.g.:
+ *   admin.shopify.com/products/elk-island-sock  →  "elk-island-sock"
+ *
+ * Template:
+ *   "your-product-handle": {
+ *     subtitle: "Short tagline shown under the product title",
+ *     highlights: [
+ *       "Key feature or spec",
+ *       "Another feature",
+ *     ],
+ *   },
+ *
+ * Both fields are optional — omit either if not needed.
+ * Everything else (price, images, variants, availability) comes from Shopify.
+ */
 const productEnhancements: Record<
   string,
   { subtitle?: string; highlights?: string[] }

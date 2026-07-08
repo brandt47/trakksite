@@ -4,7 +4,7 @@ import type { Product } from "@/lib/products";
 import { IconArrowRight } from "@/components/icons";
 
 export default function ProductCard({ product }: { product: Product }) {
-  const { title, subtitle, price, currency, images, handle, available } = product;
+  const { title, subtitle, price, compareAtPrice, currency, images, handle, available } = product;
   const image = images[0];
 
   return (
@@ -33,6 +33,11 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className="mt-4 flex items-center justify-between">
           <span className="font-display text-lg text-cream">
             ${price.toFixed(2)} {currency}
+            {compareAtPrice && (
+              <span className="ml-2 text-sm text-cream/50 line-through">
+                ${compareAtPrice.toFixed(2)}
+              </span>
+            )}
           </span>
           <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-sand transition group-hover:text-clay-light">
             View

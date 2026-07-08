@@ -15,7 +15,7 @@ export default function MeetJack() {
           </h2>
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone">
             <p>
-              Jack is an orange cat. He has never climbed a mountain or
+              He has never climbed a mountain or
               finished a marathon. Most of his exploring happens from a
               windowsill, a porch step, or (more often than we&rsquo;d like to
               admit) the middle of a keyboard during a design review.
@@ -25,11 +25,11 @@ export default function MeetJack() {
               in, when the bison are grazing right beside the road and he sits
               up in the window to watch them. The rest of the time he inspects
               new gear before it leaves the house and supervises product
-              sketches with the quiet confidence of someone who is definitely
+              sketches with the confidence of someone who is definitely
               in charge.
             </p>
             <p>
-              That curiosity, not credentials and not summits, became the
+              That curiosity became the
               foundation for TRAKK. You don&rsquo;t need to be an elite athlete
               to want to know what&rsquo;s over the next hill. You just need to
               be curious enough to go look. Jack reminded us of that, and every

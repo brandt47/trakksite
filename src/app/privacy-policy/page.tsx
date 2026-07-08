@@ -159,10 +159,10 @@ const sections = [
         If you have questions about this Privacy Policy or how we handle
         your personal information, contact us at{" "}
         <a
-          href="mailto:hello@trakksocks.com"
+          href="mailto:cs@trakk.ca"
           className="font-semibold text-clay underline-offset-4 hover:underline"
         >
-          hello@trakksocks.com
+          cs@trakk.ca
         </a>
         .
       </p>
