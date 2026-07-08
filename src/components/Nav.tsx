@@ -32,12 +32,12 @@ export default function Nav() {
         </nav>
         <div className="flex items-center justify-end gap-2">
           <CartButton />
-          <a
-            href="#waitlist"
+          <Link
+            href="/shop"
             className="hidden rounded-full bg-cream px-5 py-2.5 text-sm font-semibold text-charcoal transition hover:bg-white md:inline-flex"
           >
-            Join the Waitlist
-          </a>
+            Shop the Sock
+          </Link>
           <MobileMenu />
         </div>
       </div>

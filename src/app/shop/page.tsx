@@ -22,7 +22,7 @@ export default async function ShopPage() {
       <main className="flex flex-1 flex-col">
         <PageHero
           title="Shop TRAKK"
-          description="Technical socks built in Canada. This is only the start, more on the way."
+          description="Technical socks built in Canada. The Elk Island Sock launches as a limited first batch of 28 pairs — this is only the start, more on the way."
         />
         <section className="bg-cream py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 sm:px-10">

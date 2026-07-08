@@ -82,13 +82,13 @@ export default function MobileMenu() {
         </nav>
 
         <div className="px-6 pb-10 pt-4">
-          <a
-            href="/#waitlist"
+          <Link
+            href="/shop"
             onClick={() => setOpen(false)}
             className="block w-full rounded-full bg-clay px-5 py-3 text-center text-sm font-semibold text-cream transition hover:bg-clay-light"
           >
-            Join the Waitlist
-          </a>
+            Shop the Sock
+          </Link>
         </div>
       </div>
     </>

@@ -1,7 +1,11 @@
 import { ElkIslandScene } from "@/components/graphics";
 import WaitlistForm from "@/components/WaitlistForm";
+import { getFeaturedProduct } from "@/lib/products";
 
-export default function FinalCta() {
+export default async function FinalCta() {
+  const product = await getFeaturedProduct();
+  const soldOut = product ? !product.available : false;
+
   return (
     <section id="waitlist" className="relative isolate overflow-hidden bg-forest py-28 sm:py-36">
       <ElkIslandScene className="absolute inset-0 h-full w-full opacity-20" />
@@ -9,14 +13,23 @@ export default function FinalCta() {
 
       <div className="relative mx-auto max-w-3xl px-6 text-center sm:px-10">
         <h2 className="font-display text-4xl font-semibold leading-tight text-cream sm:text-5xl">
-          Be the first to land a pair.
+          {soldOut ? "The first batch is gone." : "Don't miss the next batch."}
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-cream/80">
-          The Elk Island Sock is on its way. Join the waitlist and we&rsquo;ll
-          let you know the moment it&rsquo;s ready to ship.
+          {soldOut ? (
+            <>
+              All 28 pairs found homes. Drop your email and you&rsquo;ll be first
+              to know the moment the next batch drops.
+            </>
+          ) : (
+            <>
+              The first batch is just 28 pairs. Join the list and we&rsquo;ll
+              tell you the moment we restock — before it goes public.
+            </>
+          )}
         </p>
         <div className="mt-9 flex justify-center">
-          <WaitlistForm />
+          <WaitlistForm soldOut={soldOut} />
         </div>
       </div>
     </section>

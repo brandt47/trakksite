@@ -64,6 +64,7 @@ const productEnhancements: Record<
   "elk-island-sock": {
     subtitle: "Our very first pair",
     highlights: [
+      "Limited first batch — only 28 pairs",
       "67% merino wool, naturally odor-resistant",
       "Reinforced heel & toe for durability",
       "Venting mesh panels for breathability",
@@ -116,4 +117,24 @@ export async function getProductByHandle(
 ): Promise<Product | null> {
   const product = await fetchProductByHandle(handle);
   return product ? mapProduct(product) : null;
+}
+
+/**
+ * The hero product the marketing pages revolve around. Drives the
+ * "buy now" vs. "next batch" copy switching across the site.
+ */
+export const FEATURED_PRODUCT_HANDLE = "elk-island-sock";
+
+/**
+ * Fetches the featured product for marketing copy, swallowing any Shopify
+ * error so the homepage/story/lifestyle pages still render. Returns null when
+ * it can't be loaded — callers should treat that as "available" and point to
+ * the shop rather than hiding the buy path.
+ */
+export async function getFeaturedProduct(): Promise<Product | null> {
+  try {
+    return await getProductByHandle(FEATURED_PRODUCT_HANDLE);
+  } catch {
+    return null;
+  }
 }

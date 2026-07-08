@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function WaitlistForm() {
+export default function WaitlistForm({ soldOut = false }: { soldOut?: boolean }) {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -38,7 +38,8 @@ export default function WaitlistForm() {
   if (submitted) {
     return (
       <p className="font-display text-lg text-cream">
-        You&rsquo;re on the list. Welcome aboard.
+        You&rsquo;re on the list. We&rsquo;ll email you the moment the next
+        batch drops.
       </p>
     );
   }
@@ -66,7 +67,7 @@ export default function WaitlistForm() {
           disabled={submitting}
           className="inline-flex shrink-0 items-center justify-center rounded-full bg-clay px-7 py-3.5 text-sm font-semibold text-cream transition hover:bg-clay-light disabled:opacity-60"
         >
-          {submitting ? "Joining…" : "Join the Waitlist"}
+          {submitting ? "Adding you…" : soldOut ? "Notify Me" : "Get Notified"}
         </button>
       </div>
       {error && <p className="text-sm text-clay-light">{error}</p>}
