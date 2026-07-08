@@ -11,8 +11,10 @@ export const metadata: Metadata = {
     "Shop TRAKK's lineup of technical outdoor socks, designed in Edmonton and made in Canada.",
 };
 
-export default function ShopPage() {
-  const products = getAllProducts();
+export const revalidate = 60;
+
+export default async function ShopPage() {
+  const products = await getAllProducts();
 
   return (
     <div className="flex flex-1 flex-col">

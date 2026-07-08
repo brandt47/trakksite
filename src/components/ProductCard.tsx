@@ -5,6 +5,7 @@ import { IconArrowRight } from "@/components/icons";
 
 export default function ProductCard({ product }: { product: Product }) {
   const { title, subtitle, price, currency, images, handle, available } = product;
+  const image = images[0];
 
   return (
     <Link
@@ -12,12 +13,14 @@ export default function ProductCard({ product }: { product: Product }) {
       className="group relative flex flex-col overflow-hidden rounded-2xl bg-forest shadow-sm transition hover:shadow-lg"
     >
       <div className="relative aspect-square w-full overflow-hidden bg-cream">
-        <Image
-          src={images[0].src}
-          alt={images[0].alt}
-          fill
-          className="object-contain p-8 transition duration-500 group-hover:scale-105"
-        />
+        {image && (
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            className="object-contain p-8 transition duration-500 group-hover:scale-105"
+          />
+        )}
         {!available && (
           <span className="absolute left-4 top-4 rounded-full bg-charcoal/80 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cream">
             Sold Out

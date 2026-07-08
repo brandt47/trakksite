@@ -9,7 +9,7 @@ import { useCart } from "@/lib/cart-context";
 import { IconArrowRight, IconMinus, IconPlus, IconTrash } from "@/components/icons";
 
 export default function CartPage() {
-  const { lines, updateQuantity, removeLine, subtotal } = useCart();
+  const { lines, updateQuantity, removeLine, subtotal, checkoutUrl, isLoading } = useCart();
 
   return (
     <div className="flex flex-1 flex-col">
@@ -57,7 +57,7 @@ export default function CartPage() {
                             <button
                               type="button"
                               onClick={() =>
-                                updateQuantity(line.variantId, line.quantity - 1)
+                                updateQuantity(line.id, line.quantity - 1)
                               }
                               className="flex h-9 w-9 items-center justify-center text-charcoal"
                               aria-label="Decrease quantity"
@@ -70,7 +70,7 @@ export default function CartPage() {
                             <button
                               type="button"
                               onClick={() =>
-                                updateQuantity(line.variantId, line.quantity + 1)
+                                updateQuantity(line.id, line.quantity + 1)
                               }
                               className="flex h-9 w-9 items-center justify-center text-charcoal"
                               aria-label="Increase quantity"
@@ -85,7 +85,7 @@ export default function CartPage() {
                       </div>
                       <button
                         type="button"
-                        onClick={() => removeLine(line.variantId)}
+                        onClick={() => removeLine(line.id)}
                         aria-label="Remove item"
                         className="self-start text-stone transition hover:text-clay"
                       >
@@ -108,12 +108,13 @@ export default function CartPage() {
                   <p className="mt-1 text-xs text-stone">
                     Shipping and taxes calculated at checkout.
                   </p>
-                  <Link
-                    href="/checkout"
-                    className="mt-6 flex w-full items-center justify-center rounded-full bg-clay px-7 py-3.5 text-sm font-semibold text-cream transition hover:bg-clay-light"
+                  <a
+                    href={checkoutUrl ?? "#"}
+                    aria-disabled={!checkoutUrl || isLoading}
+                    className="mt-6 flex w-full items-center justify-center rounded-full bg-clay px-7 py-3.5 text-sm font-semibold text-cream transition hover:bg-clay-light aria-disabled:opacity-50 aria-disabled:pointer-events-none"
                   >
-                    Checkout
-                  </Link>
+                    {isLoading ? "Updating…" : "Checkout"}
+                  </a>
                   <Link
                     href="/shop"
                     className="mt-3 flex w-full items-center justify-center text-sm font-semibold text-charcoal/70 transition hover:text-charcoal"

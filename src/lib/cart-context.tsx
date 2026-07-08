@@ -8,84 +8,107 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import {
+  cartCreate,
+  cartLinesAdd,
+  cartLinesUpdate,
+  cartLinesRemove,
+  fetchCart,
+  type CartLine,
+  type MappedCart,
+} from "./shopify";
 
-export type CartLine = {
-  variantId: string;
-  productHandle: string;
-  productTitle: string;
-  variantTitle: string;
-  price: number;
-  image: string;
-  quantity: number;
-};
+export type { CartLine };
 
 type CartContextValue = {
   lines: CartLine[];
   isOpen: boolean;
   openCart: () => void;
   closeCart: () => void;
-  addLine: (line: Omit<CartLine, "quantity">, quantity?: number) => void;
-  updateQuantity: (variantId: string, quantity: number) => void;
-  removeLine: (variantId: string) => void;
+  addLine: (variantId: string, quantity?: number) => Promise<void>;
+  updateQuantity: (lineId: string, quantity: number) => Promise<void>;
+  removeLine: (lineId: string) => Promise<void>;
   clearCart: () => void;
+  checkoutUrl: string | null;
   subtotal: number;
   totalQuantity: number;
+  isLoading: boolean;
 };
 
 const CartContext = createContext<CartContextValue | null>(null);
-const STORAGE_KEY = "trakk-cart";
+const CART_ID_KEY = "trakk-cart-id";
 
 export function CartProvider({ children }: { children: ReactNode }) {
+  const [cartId, setCartId] = useState<string | null>(null);
+  const [checkoutUrl, setCheckoutUrl] = useState<string | null>(null);
   const [lines, setLines] = useState<CartLine[]>([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [hydrated, setHydrated] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) setLines(JSON.parse(stored));
-    } catch {
-      // corrupted or unavailable storage, start with an empty cart
-    }
-    setHydrated(true);
+    const storedId = localStorage.getItem(CART_ID_KEY);
+    if (!storedId) return;
+
+    fetchCart(storedId).then((cart) => {
+      if (!cart) {
+        localStorage.removeItem(CART_ID_KEY);
+        return;
+      }
+      applyCart(cart);
+    });
   }, []);
 
-  useEffect(() => {
-    if (!hydrated) return;
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(lines));
-  }, [lines, hydrated]);
-
-  function addLine(line: Omit<CartLine, "quantity">, quantity = 1) {
-    setLines((current) => {
-      const existing = current.find((l) => l.variantId === line.variantId);
-      if (existing) {
-        return current.map((l) =>
-          l.variantId === line.variantId
-            ? { ...l, quantity: l.quantity + quantity }
-            : l,
-        );
-      }
-      return [...current, { ...line, quantity }];
-    });
-    setIsOpen(true);
+  function applyCart(cart: MappedCart) {
+    setCartId(cart.id);
+    setCheckoutUrl(cart.checkoutUrl);
+    setLines(cart.lines);
+    localStorage.setItem(CART_ID_KEY, cart.id);
   }
 
-  function updateQuantity(variantId: string, quantity: number) {
-    setLines((current) =>
-      quantity <= 0
-        ? current.filter((l) => l.variantId !== variantId)
-        : current.map((l) =>
-            l.variantId === variantId ? { ...l, quantity } : l,
-          ),
-    );
+  async function addLine(variantId: string, quantity = 1) {
+    setIsLoading(true);
+    try {
+      const lineInput = { merchandiseId: variantId, quantity };
+      const cart = cartId
+        ? await cartLinesAdd(cartId, [lineInput])
+        : await cartCreate([lineInput]);
+      applyCart(cart);
+      setIsOpen(true);
+    } finally {
+      setIsLoading(false);
+    }
   }
 
-  function removeLine(variantId: string) {
-    setLines((current) => current.filter((l) => l.variantId !== variantId));
+  async function updateQuantity(lineId: string, quantity: number) {
+    if (!cartId) return;
+    setIsLoading(true);
+    try {
+      const cart =
+        quantity <= 0
+          ? await cartLinesRemove(cartId, [lineId])
+          : await cartLinesUpdate(cartId, [{ id: lineId, quantity }]);
+      applyCart(cart);
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  async function removeLine(lineId: string) {
+    if (!cartId) return;
+    setIsLoading(true);
+    try {
+      const cart = await cartLinesRemove(cartId, [lineId]);
+      applyCart(cart);
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   function clearCart() {
+    setCartId(null);
+    setCheckoutUrl(null);
     setLines([]);
+    localStorage.removeItem(CART_ID_KEY);
   }
 
   const subtotal = useMemo(
@@ -108,8 +131,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
         updateQuantity,
         removeLine,
         clearCart,
+        checkoutUrl,
         subtotal,
         totalQuantity,
+        isLoading,
       }}
     >
       {children}

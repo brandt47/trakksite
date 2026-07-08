@@ -31,7 +31,7 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-cream text-charcoal">
+      <body suppressHydrationWarning className="min-h-full flex flex-col bg-cream text-charcoal">
         <CartProvider>
           {children}
           <CartDrawer />

@@ -64,7 +64,7 @@ export default function CartDrawer() {
                         <button
                           type="button"
                           onClick={() =>
-                            updateQuantity(line.variantId, line.quantity - 1)
+                            updateQuantity(line.id, line.quantity - 1)
                           }
                           className="flex h-8 w-8 items-center justify-center text-charcoal"
                           aria-label="Decrease quantity"
@@ -77,7 +77,7 @@ export default function CartDrawer() {
                         <button
                           type="button"
                           onClick={() =>
-                            updateQuantity(line.variantId, line.quantity + 1)
+                            updateQuantity(line.id, line.quantity + 1)
                           }
                           className="flex h-8 w-8 items-center justify-center text-charcoal"
                           aria-label="Increase quantity"
@@ -92,7 +92,7 @@ export default function CartDrawer() {
                   </div>
                   <button
                     type="button"
-                    onClick={() => removeLine(line.variantId)}
+                    onClick={() => removeLine(line.id)}
                     aria-label="Remove item"
                     className="self-start text-stone transition hover:text-clay"
                   >

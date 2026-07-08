@@ -14,19 +14,9 @@ export default function AddToCartForm({ product }: { product: Product }) {
   const variant =
     product.variants.find((v) => v.id === variantId) ?? product.variants[0];
 
-  function handleAddToCart() {
+  async function handleAddToCart() {
     if (!variant) return;
-    addLine(
-      {
-        variantId: variant.id,
-        productHandle: product.handle,
-        productTitle: product.title,
-        variantTitle: variant.title,
-        price: variant.price,
-        image: product.images[0].src,
-      },
-      quantity,
-    );
+    await addLine(variant.id, quantity);
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
   }
