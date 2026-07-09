@@ -1,3 +1,5 @@
+import { getAdminAccessToken } from "@/lib/shopify-admin";
+
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const API_VERSION = "2025-04";
 
@@ -9,10 +11,20 @@ export async function POST(request: Request) {
   }
 
   const storeDomain = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN;
-  const adminToken = process.env.SHOPIFY_ADMIN_API_ACCESS_TOKEN;
+
+  let adminToken: string | null;
+  try {
+    adminToken = await getAdminAccessToken();
+  } catch (err) {
+    console.error("Failed to obtain Shopify Admin token:", err);
+    return Response.json(
+      { error: "Waitlist is not configured yet." },
+      { status: 500 },
+    );
+  }
 
   if (!storeDomain || !adminToken) {
-    console.error("Missing NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN or SHOPIFY_ADMIN_API_ACCESS_TOKEN.");
+    console.error("Missing NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN or Shopify Admin credentials.");
     return Response.json(
       { error: "Waitlist is not configured yet." },
       { status: 500 },
