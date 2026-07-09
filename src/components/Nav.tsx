@@ -11,7 +11,7 @@ const navLinks = [
 
 export default function Nav() {
   return (
-    <header className="absolute top-0 z-30 w-full">
+    <header className="absolute top-0 z-30 w-full bg-black/20 backdrop-blur-sm">
       <div className="mx-auto grid max-w-7xl grid-cols-3 items-center px-6 py-6 sm:px-10">
         <Link href="/" className="flex items-center gap-3">
           <Image

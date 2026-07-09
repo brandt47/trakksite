@@ -25,7 +25,7 @@ const scenes = [
 
 export default function Lifestyle() {
   return (
-    <section className="bg-lake py-24 sm:py-32">
+    <section className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 sm:px-10">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {scenes.map(({ title, description, image }) => (

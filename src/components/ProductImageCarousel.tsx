@@ -21,15 +21,17 @@ export default function ProductImageCarousel({
   return (
     <div className="flex flex-col gap-3">
       <div className="relative overflow-hidden rounded-3xl bg-cream shadow-2xl">
-        <Image
-          key={current.src}
-          src={current.src}
-          alt={current.alt}
-          width={600}
-          height={480}
-          className="w-full"
-          priority={index === 0}
-        />
+        {images.map((img, i) => (
+          <Image
+            key={img.src}
+            src={img.src}
+            alt={img.alt}
+            width={600}
+            height={480}
+            className={`w-full transition-opacity duration-300 ${i > 0 ? "absolute inset-0" : ""} ${i === index ? "opacity-100" : "opacity-0"}`}
+            priority={i === 0}
+          />
+        ))}
         {images.length > 1 && (
           <>
             <button
