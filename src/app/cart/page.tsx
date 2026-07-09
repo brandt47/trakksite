@@ -37,7 +37,7 @@ export default function CartPage() {
                       key={line.variantId}
                       className="flex gap-5 rounded-2xl border border-stone/10 bg-white/40 p-5"
                     >
-                      <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-forest">
+                      <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-white">
                         <Image
                           src={line.image}
                           alt={line.productTitle}

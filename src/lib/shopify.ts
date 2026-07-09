@@ -46,6 +46,7 @@ export type ShopifyProduct = {
   handle: string;
   title: string;
   description: string;
+  descriptionHtml: string;
   availableForSale: boolean;
   priceRange: { minVariantPrice: ShopifyMoney };
   compareAtPriceRange: { minVariantPrice: ShopifyMoney | null };
@@ -79,7 +80,7 @@ type ShopifyCart = {
 // --- GraphQL field strings ---
 
 const PRODUCT_FIELDS = `
-  id handle title description availableForSale
+  id handle title description descriptionHtml availableForSale
   priceRange { minVariantPrice { amount currencyCode } }
   compareAtPriceRange { minVariantPrice { amount currencyCode } }
   images(first: 20) { edges { node { url altText } } }

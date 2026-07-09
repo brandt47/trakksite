@@ -45,3 +45,16 @@ body {
 .font-display {
   font-family: var(--font-display), Georgia, serif;
 }
+
+.shopify-description ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.shopify-description p + ul,
+.shopify-description p + p {
+  margin-top: 0.5rem;
+}

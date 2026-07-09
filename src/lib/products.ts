@@ -28,6 +28,7 @@ export type Product = {
   title: string;
   subtitle?: string;
   description: string;
+  descriptionHtml: string;
   highlights: string[];
   images: ProductImage[];
   currency: string;
@@ -62,7 +63,7 @@ const productEnhancements: Record<
   { subtitle?: string; highlights?: string[] }
 > = {
   "elk-island-sock": {
-    subtitle: "Our very first pair",
+    subtitle: "The national park from above",
     highlights: [
       "Limited first batch — only 28 pairs",
       "67% merino wool, naturally odor-resistant",
@@ -86,6 +87,7 @@ function mapProduct(p: ShopifyProduct): Product {
     title: p.title,
     subtitle: enh.subtitle,
     description: p.description,
+    descriptionHtml: p.descriptionHtml,
     highlights: enh.highlights ?? [],
     images: p.images.edges.map(({ node }) => ({
       src: node.url,

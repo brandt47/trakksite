@@ -62,9 +62,10 @@ export default async function ProductPage({
               <p className="mt-4 font-display text-xl text-cream sm:text-2xl">
                 ${product.price.toFixed(2)} {product.currency}
               </p>
-              <p className="mt-4 text-base leading-relaxed text-cream/85">
-                {product.description}
-              </p>
+              <div
+                className="shopify-description mt-4 text-base leading-relaxed text-cream/85"
+                dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
+              />
 
               <AddToCartForm product={product} />
             </div>

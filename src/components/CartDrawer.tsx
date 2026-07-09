@@ -46,7 +46,7 @@ export default function CartDrawer() {
             <ul className="space-y-6">
               {lines.map((line) => (
                 <li key={line.variantId} className="flex gap-4">
-                  <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl bg-forest">
+                  <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl bg-white">
                     <Image
                       src={line.image}
                       alt={line.productTitle}
