@@ -13,18 +13,17 @@ export default async function FinalCta() {
 
       <div className="relative mx-auto max-w-3xl px-6 text-center sm:px-10">
         <h2 className="font-display text-4xl font-semibold leading-tight text-cream sm:text-5xl">
-          {soldOut ? "The first batch is gone." : "Don't miss the next batch."}
+          {soldOut ? "The first batch is gone." : "Batch two is coming."}
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-cream/80">
           {soldOut ? (
             <>
-              All 28 pairs found homes. Drop your email and you&rsquo;ll be first
-              to know the moment the next batch drops.
+              All 28 pairs found homes. Get on the list and you&rsquo;ll be
+              first to know the moment batch two drops.
             </>
           ) : (
             <>
-              The first batch is just 28 pairs. Join the list and we&rsquo;ll
-              tell you the moment we restock — before it goes public.
+              Get on the list to be the first to hear what comes next.
             </>
           )}
         </p>

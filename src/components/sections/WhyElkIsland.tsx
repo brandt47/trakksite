@@ -10,6 +10,7 @@ export default function WhyElkIsland() {
             src="/images/realelkisland.jpg"
             alt="Sunset over Astotin Lake, Elk Island National Park, Alberta"
             fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/30 via-transparent to-transparent" />

@@ -1,39 +1,32 @@
 import Image from "next/image";
-import { IconPaw } from "@/components/icons";
+import { IconLeaf } from "@/components/icons";
 
 export default function MeetJack() {
   return (
-    <section id="meet-jack" className="bg-cream py-24 sm:py-32">
+    <section id="leadership" className="bg-cream py-24 sm:py-32">
       <div className="mx-auto grid max-w-7xl gap-14 px-6 sm:px-10 lg:grid-cols-2 lg:items-center lg:gap-20">
         <div>
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-clay/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-clay">
-            <IconPaw className="h-4 w-4" />
-            The spirit behind TRAKK
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-forest/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-forest">
+            <IconLeaf className="h-4 w-4" />
+            Leadership
           </div>
           <h2 className="font-display text-4xl font-semibold leading-tight text-charcoal sm:text-5xl">
-            Meet Jack.
+            Under the direction of Jack.
           </h2>
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone">
             <p>
-              He has never climbed a mountain or
-              finished a marathon. Most of his exploring happens from a
-              windowsill, a porch step, or (more often than we&rsquo;d like to
-              admit) the middle of a keyboard during a design review.
+              Trakk was founded in Edmonton in 2025 under the direction of Jack,
+              Chief Adventure Officer. Jack sets the design direction for every
+              Trakk release and personally approves each colorway.
             </p>
             <p>
-              He comes along on the easy hikes. His favourite part is the drive
-              in, when the bison are grazing right beside the road and he sits
-              up in the window to watch them. The rest of the time he inspects
-              new gear before it leaves the house and supervises product
-              sketches with the confidence of someone who is definitely
-              in charge.
+              He is known for his exacting standards, his commitment to
+              geographic accuracy, and his refusal to compromise on cuff
+              tension.
             </p>
             <p>
-              That curiosity became the
-              foundation for TRAKK. You don&rsquo;t need to be an elite athlete
-              to want to know what&rsquo;s over the next hill. You just need to
-              be curious enough to go look. Jack reminded us of that, and every
-              sock we make carries a bit of his spirit along for the trip.
+              Trakk&rsquo;s first release, the Elk Island Sock, reflects his
+              belief that the best gear starts with the places closest to home.
             </p>
           </div>
         </div>
@@ -42,7 +35,7 @@ export default function MeetJack() {
           <div className="aspect-square overflow-hidden rounded-3xl shadow-lg">
             <Image
               src="/images/jack.png"
-              alt="Jack, an orange cat, riding along on a trail"
+              alt="Jack, Chief Adventure Officer"
               width={600}
               height={600}
               className="h-full w-full object-cover"
@@ -50,7 +43,7 @@ export default function MeetJack() {
           </div>
           <div className="absolute -bottom-5 -left-5 rounded-2xl bg-charcoal px-5 py-3 text-cream shadow-lg">
             <p className="font-display text-sm font-semibold">Jack</p>
-            <p className="text-xs text-cream/70">Director of Curiosity</p>
+            <p className="text-xs text-cream/70">Chief Adventure Officer</p>
           </div>
         </div>
       </div>

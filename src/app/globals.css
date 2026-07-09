@@ -34,6 +34,7 @@
   --color-stone: var(--color-stone);
   --font-display: var(--font-fraunces);
   --font-sans: var(--font-inter);
+  --font-script: var(--font-caveat);
 }
 
 body {
@@ -44,6 +45,10 @@ body {
 
 .font-display {
   font-family: var(--font-display), Georgia, serif;
+}
+
+.font-script {
+  font-family: var(--font-script), "Segoe Script", cursive;
 }
 
 .shopify-description ul {

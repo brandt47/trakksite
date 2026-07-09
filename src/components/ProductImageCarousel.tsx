@@ -74,6 +74,7 @@ export default function ProductImageCarousel({
                 src={img.src}
                 alt={img.alt}
                 fill
+                sizes="72px"
                 className="object-contain p-1"
               />
             </button>

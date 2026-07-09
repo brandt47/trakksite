@@ -68,6 +68,11 @@ export default async function ProductPage({
               />
 
               <AddToCartForm product={product} />
+
+              <p className="mt-6 text-xs leading-relaxed text-cream/60">
+                Every Trakk design is reviewed and approved by our Chief
+                Adventure Officer before production.
+              </p>
             </div>
           </div>
         </section>

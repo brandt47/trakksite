@@ -19,9 +19,12 @@ export default function Nav() {
             alt="TRAKK"
             width={349}
             height={301}
-            className="h-12 w-12"
+            className="h-20 w-20 sm:h-24 sm:w-24"
             priority
           />
+          <span className="font-script text-2xl font-bold text-clay sm:text-3xl">
+            Land On Your Feet
+          </span>
         </Link>
         <nav className="hidden items-center justify-center gap-8 text-sm font-medium text-cream/90 md:flex">
           {navLinks.map(({ href, label }) => (

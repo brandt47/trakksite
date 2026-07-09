@@ -9,7 +9,7 @@ const trustPoints = [
   {
     icon: IconMaple,
     title: "Canadian made",
-    description: "Manufactured domestically, supporting local mills and makers.",
+    description: "Designed in a garage in Edmonton, Alberta.",
   },
   {
     icon: IconShield,

@@ -6,7 +6,7 @@ const destinations = [
   {
     title: "Our Story",
     description:
-      "Why a national park east of Edmonton became the pattern on your foot.",
+      "How TRAKK came to be.",
     href: "/our-story",
     image: "/images/realelkisland.jpg",
   },
@@ -43,6 +43,7 @@ export default function Explore() {
                   src={image}
                   alt={title}
                   fill
+                  sizes="(min-width: 640px) 50vw, 100vw"
                   className="object-cover transition duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent" />

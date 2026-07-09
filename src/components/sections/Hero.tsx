@@ -28,6 +28,10 @@ export default async function Hero() {
           <h1 className="font-display text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
             Land on your feet.
           </h1>
+          <p className="mt-5 max-w-md text-lg leading-relaxed text-white/85">
+            Merino trail socks knit with a true map of Elk Island National Park.
+            Designed in Edmonton.
+          </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             {available ? (
               <a

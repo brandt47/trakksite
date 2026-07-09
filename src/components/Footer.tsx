@@ -54,9 +54,9 @@ export default function Footer() {
               </h3>
               <ul className="mt-4 space-y-2.5 text-sm">
                 <li>
-                  <a href="#waitlist" className="transition hover:text-clay-light">
+                  <Link href="/#waitlist" className="transition hover:text-clay-light">
                     Join the Waitlist
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -75,6 +75,11 @@ export default function Footer() {
             <p>Made in Canada, worn everywhere.</p>
           </div>
         </div>
+
+        <p className="mt-6 text-center text-[11px] leading-relaxed text-cream/30 sm:text-left">
+          Trakk is led by Jack, Chief Adventure Officer. Any complaints may be
+          directed to him.
+        </p>
       </div>
     </footer>
   );

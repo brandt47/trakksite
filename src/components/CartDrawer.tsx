@@ -51,6 +51,7 @@ export default function CartDrawer() {
                       src={line.image}
                       alt={line.productTitle}
                       fill
+                      sizes="80px"
                       className="object-contain p-2"
                     />
                   </div>
