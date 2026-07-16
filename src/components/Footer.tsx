@@ -1,8 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { IconMaple } from "@/components/icons";
+import { IconMaple, IconInstagram, IconFacebook, IconTikTok } from "@/components/icons";
+
+const socialLinks = [
+  { href: "https://www.instagram.com/trakkbyjack", label: "Instagram", Icon: IconInstagram },
+  { href: "https://www.facebook.com/trakkbyjack", label: "Facebook", Icon: IconFacebook },
+  { href: "https://www.tiktok.com/@trakkbyjack", label: "TikTok", Icon: IconTikTok },
+];
 
 const siteLinks = [
+  { href: "/", label: "Home" },
   { href: "/shop", label: "Shop" },
   { href: "/our-story", label: "Our Story" },
   { href: "/lifestyle", label: "Lifestyle" },
@@ -30,6 +37,20 @@ export default function Footer() {
               <IconMaple className="h-4 w-4 text-clay" />
               Designed in Edmonton, made in Canada.
             </p>
+            <div className="mt-5 flex items-center gap-3">
+              {socialLinks.map(({ href, label, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="text-cream/40 transition hover:text-cream/80"
+                >
+                  <Icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
           </div>
 
           <div className="flex flex-col gap-8 sm:flex-row sm:gap-16">
