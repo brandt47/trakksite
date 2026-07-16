@@ -13,7 +13,7 @@ export default function Footer() {
     <footer className="relative overflow-hidden bg-charcoal text-cream/70">
       <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-cream/15 to-transparent" />
 
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10">
+      <div className="mx-auto max-w-7xl px-6 py-10 sm:px-10">
         <div className="flex flex-col gap-12 sm:flex-row sm:justify-between">
           <div className="max-w-xs">
             <Image
@@ -21,7 +21,7 @@ export default function Footer() {
               alt="TRAKK"
               width={349}
               height={301}
-              className="h-10 w-10"
+              className="h-16 w-16 sm:h-20 sm:w-20"
             />
             <p className="mt-5 font-display text-2xl text-cream">
               Land on your feet
@@ -60,10 +60,23 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
+
+            <div>
+              <h3 className="font-display text-sm font-semibold uppercase tracking-wide text-cream">
+                Contact
+              </h3>
+              <ul className="mt-4 space-y-2.5 text-sm">
+                <li>
+                  <Link href="/contact" className="transition hover:text-clay-light">
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center gap-4 border-t border-cream/10 pt-8 text-xs text-cream/40 sm:flex-row sm:justify-between">
+        <div className="mt-8 flex flex-col items-center gap-4 border-t border-cream/10 pt-6 text-xs text-cream/40 sm:flex-row sm:justify-between">
           <p>&copy; {new Date().getFullYear()} TRAKK. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className="transition hover:text-cream/70">
