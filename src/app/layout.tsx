@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: "TRAKK | The Elk Island Sock",
   description:
     "TRAKK makes technical outdoor socks, designed in Edmonton and made in Canada. The Elk Island Sock is our first release, inspired by Elk Island National Park in Alberta.",
+  icons: {
+    icon: "/images/trakk-logo.png",
+  },
 };
 
 export default function RootLayout({
