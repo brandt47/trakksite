@@ -21,8 +21,8 @@ export default function OurStoryPage() {
           title="Our Story"
           description="A national park, a quiet summer of trails, and a cat who came along for the ride."
         />
-        <WhyElkIsland />
         <MeetJack />
+        <WhyElkIsland />
         <FinalCta />
       </main>
       <Footer />
