@@ -13,7 +13,7 @@ export default function PageHero({
 }: PageHeroProps) {
   return (
     <section className="relative isolate overflow-hidden bg-forest">
-      <div className="absolute inset-0 bg-linear-to-b from-charcoal/70 via-charcoal/50 to-forest" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-charcoal/50 to-forest" />
       <div className="relative mx-auto max-w-3xl px-6 pt-36 pb-16 text-center sm:px-10 sm:pt-44 sm:pb-20">
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-sand">
           {eyebrow}
