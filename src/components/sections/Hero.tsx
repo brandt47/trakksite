@@ -55,14 +55,14 @@ export default async function Hero() {
 
         <div className="relative mx-auto hidden w-full max-w-md lg:block lg:max-w-lg">
           <div className="absolute -inset-10 -z-10 rounded-full bg-sand/10 blur-3xl" />
-          <div className="overflow-hidden rounded-3xl bg-cream shadow-2xl">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-cream shadow-2xl">
             <Image
-              src="/images/elkislandsock.webp"
-              alt="The Elk Island Sock, front and back, left and right"
-              width={513}
-              height={412}
-              className="w-full"
+              src="/images/trakkatminnewanka.png"
+              alt="TRAKK socks on the rocks at Lake Minnewanka"
+              fill
+              className="object-cover object-[58%_74%]"
               priority
+              sizes="(min-width: 1024px) 32rem, 100vw"
             />
           </div>
           <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-white/70">
