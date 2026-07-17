@@ -14,8 +14,8 @@ export default function Home() {
       <main className="flex flex-1 flex-col">
         <Hero />
         <FeaturedProducts />
-        <FirstBatch />
         <MeetTheCao />
+        <FirstBatch />
         <HomeFaq />
         <FinalCta />
       </main>
