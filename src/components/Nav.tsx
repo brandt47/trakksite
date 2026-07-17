@@ -7,6 +7,7 @@ const navLinks = [
   { href: "/shop", label: "Shop" },
   { href: "/our-story", label: "Our Story" },
   { href: "/lifestyle", label: "Lifestyle" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 export default function Nav() {

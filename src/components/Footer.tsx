@@ -13,6 +13,7 @@ const siteLinks = [
   { href: "/shop", label: "Shop" },
   { href: "/our-story", label: "Our Story" },
   { href: "/lifestyle", label: "Lifestyle" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 export default function Footer() {
@@ -28,7 +29,7 @@ export default function Footer() {
               alt="TRAKK"
               width={349}
               height={301}
-              className="h-16 w-16 sm:h-20 sm:w-20"
+              className="h-16 w-16 shrink-0 sm:h-20 sm:w-20"
             />
             <p className="mt-5 font-display text-2xl text-cream">
               Land on your feet
