@@ -1,0 +1,6 @@
+# Jack has approved this crawl.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://trakk.ca/sitemap.xml
