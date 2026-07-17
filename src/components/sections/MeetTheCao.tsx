@@ -11,7 +11,7 @@ export default function MeetTheCao() {
               alt="Jack, Chief Adventure Officer"
               width={500}
               height={500}
-              className="h-full w-full object-cover scale-[2] origin-[70%_50%]"
+              className="h-full w-full object-cover scale-[1.4] origin-center"
             />
           </div>
 
