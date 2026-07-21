@@ -7,11 +7,11 @@ export default function MeetTheCao() {
         <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
           <div className="h-24 w-24 overflow-hidden rounded-full border-4 border-stone/15 shadow-md">
             <Image
-              src="/images/jackbush-web.jpg"
+              src="/images/jackoutsidefancybuilding.jpg"
               alt="Jack, Chief Adventure Officer"
-              width={500}
-              height={500}
-              className="h-full w-full object-cover scale-[1.4] origin-center"
+              width={3024}
+              height={3024}
+              className="h-full w-full object-cover object-[30%_65%]"
             />
           </div>
 
