@@ -39,10 +39,7 @@ export default function WhereToBuyPage() {
               <h2 className="font-display text-2xl font-semibold text-charcoal sm:text-3xl">
                 Track &rsquo;N Trail
               </h2>
-              <p className="mt-3 leading-relaxed text-stone">
-                Our first retail partner, carrying TRAKK socks at both of
-                their Alberta locations.
-              </p>
+             
               <a
                 href="https://shop.trackntrail.ca/"
                 target="_blank"
