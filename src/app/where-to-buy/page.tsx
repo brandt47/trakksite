@@ -30,7 +30,7 @@ export default function WhereToBuyPage() {
       <main className="flex flex-1 flex-col">
         <PageHero
           title="Where to Buy"
-          description="Prefer to try before you buy? TRAKK socks are in stores now."
+          description="TRAKK socks are in stores now!"
         />
 
         <section className="bg-cream py-16 sm:py-20">
