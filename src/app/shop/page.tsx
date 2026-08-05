@@ -20,10 +20,7 @@ export default async function ShopPage() {
     <div className="flex flex-1 flex-col">
       <Nav />
       <main className="flex flex-1 flex-col">
-        <PageHero
-          title="Shop TRAKK"
-          description="Technical socks built in Canada. The Elk Island Sock launches as a limited first batch of 28 pairs — this is only the start, more on the way."
-        />
+        <PageHero title="Shop TRAKK" />
         <section className="bg-cream py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 sm:px-10">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
