@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   title: "Our Story | TRAKK",
   description:
     "How a national park east of Edmonton and an orange cat named Jack became the inspiration behind TRAKK.",
+  alternates: { canonical: "/our-story" },
+  openGraph: {
+    title: "Our Story | TRAKK",
+    description:
+      "How a national park east of Edmonton and an orange cat named Jack became the inspiration behind TRAKK.",
+    url: "/our-story",
+  },
 };
 
 export default function OurStoryPage() {

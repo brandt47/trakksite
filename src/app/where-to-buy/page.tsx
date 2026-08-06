@@ -8,6 +8,12 @@ import { IconMapPin } from "@/components/icons";
 export const metadata: Metadata = {
   title: "Where to Buy | TRAKK",
   description: "Find TRAKK trail socks in stores near you, including Track 'N Trail locations in Edmonton and St. Albert.",
+  alternates: { canonical: "/where-to-buy" },
+  openGraph: {
+    title: "Where to Buy | TRAKK",
+    description: "Find TRAKK trail socks in stores near you, including Track 'N Trail locations in Edmonton and St. Albert.",
+    url: "/where-to-buy",
+  },
 };
 
 const stockists = [

@@ -30,6 +30,13 @@ export async function generateMetadata({
   return {
     title: `${product.title} | TRAKK`,
     description: product.description,
+    alternates: { canonical: `/shop/${handle}` },
+    openGraph: {
+      title: `${product.title} | TRAKK`,
+      description: product.description,
+      url: `/shop/${handle}`,
+      images: product.images?.[0]?.src ? [{ url: product.images[0].src }] : undefined,
+    },
   };
 }
 
@@ -43,9 +50,34 @@ export default async function ProductPage({
 
   if (!product) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.title,
+    description: product.description,
+    image: product.images.map((img) =>
+      img.src.startsWith("http") ? img.src : `https://trakk.ca${img.src}`,
+    ),
+    url: `https://trakk.ca/shop/${handle}`,
+    brand: { "@type": "Brand", name: "TRAKK" },
+    offers: {
+      "@type": "Offer",
+      url: `https://trakk.ca/shop/${handle}`,
+      price: product.price.toFixed(2),
+      priceCurrency: product.currency,
+      availability: product.available
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
+    },
+  };
+
   return (
     <div className="flex flex-1 flex-col">
       <Nav />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <main className="flex flex-1 flex-col">
         <section className="relative isolate overflow-hidden bg-forest">
           <div className="absolute inset-0 bg-linear-to-b from-charcoal/70 via-charcoal/40 to-forest" />

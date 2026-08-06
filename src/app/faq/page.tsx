@@ -7,7 +7,14 @@ import FaqAccordion from "@/components/sections/FaqAccordion";
 export const metadata: Metadata = {
   title: "FAQ | TRAKK",
   description:
-    "Answers about TRAKK's merino trail socks. We're an Edmonton, Alberta sock company making technical socks for hiking, camping, and running, made in Canada.",
+    "Answers about TRAKK's merino trail socks. We're an Edmonton, Alberta sock company making technical socks for hiking, camping, running, and everyday wear.",
+  alternates: { canonical: "/faq" },
+  openGraph: {
+    title: "FAQ | TRAKK",
+    description:
+      "Answers about TRAKK's merino trail socks. We're an Edmonton, Alberta sock company making technical socks for hiking, camping, running, and everyday wear.",
+    url: "/faq",
+  },
 };
 
 const faqs = [

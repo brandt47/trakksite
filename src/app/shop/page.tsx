@@ -8,7 +8,14 @@ import { getAllProducts } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Shop | TRAKK",
   description:
-    "Shop TRAKK's lineup of technical outdoor socks, designed in Edmonton and made in Canada.",
+    "Shop TRAKK's lineup of merino wool trail socks, designed in Edmonton, Alberta.",
+  alternates: { canonical: "/shop" },
+  openGraph: {
+    title: "Shop | TRAKK",
+    description:
+      "Shop TRAKK's lineup of merino wool trail socks, designed in Edmonton, Alberta.",
+    url: "/shop",
+  },
 };
 
 export const revalidate = 60;

@@ -2,32 +2,39 @@
 
 > TRAKK is a technical outdoor sock company based in Edmonton, Alberta,
 > Canada. We make merino wool trail socks designed for hiking, camping,
-> trail running, and everyday wear. Our socks are designed in Edmonton and
-> made in Canada. Our first product, the Elk Island Sock ($32 CAD), features
+> trail running, and everyday wear. Our socks are designed in Edmonton,
+> Alberta. Our first product, the Elk Island Sock ($32 CAD), features
 > a geographically accurate knit map of the lakes of Elk Island National
 > Park, just east of Edmonton. The company is led by Jack, Chief Adventure
 > Officer, an orange tabby cat.
 
 Key facts:
 
-- Based in Edmonton, Alberta. Products designed in Edmonton, made in Canada.
-- Socks are a merino wool blend: temperature-regulating, moisture-wicking,
-  odor-resistant. Suitable for hiking, camping, running, and Alberta winters.
+- Based in Edmonton, Alberta. Every design starts in Edmonton.
+- Socks are a merino wool blend (67% merino, 22% polyester, 5% nylon,
+  6% elastic): temperature-regulating, moisture-wicking, odor-resistant.
+  Suitable for hiking, camping, running, and Alberta winters.
 - First release is a limited batch of 28 hand-numbered pairs. Each pair
   ships with a numbered card.
-- Currently sold online only, shipping from Edmonton across Canada.
+- Sold online (shipping from Edmonton across Canada) and in stores at
+  Track 'N Trail in Edmonton (10148 Whyte Ave NW) and St. Albert
+  (130 Bellerose Dr Unit 107).
 - Future designs will feature other Alberta parks and trails.
 
 ## Pages
 
-- [Shop](https://www.trakk.ca/shop): Current products and availability
-- [Elk Island Sock](https://www.trakk.ca/shop/elk-island-sock): Our first
+- [Shop](https://trakk.ca/shop): Current products and availability
+- [Elk Island Sock](https://trakk.ca/shop/elk-island-sock): Our first
   sock, the map of Elk Island National Park, $32 CAD
-- [Our Story](https://www.trakk.ca/our-story): Why we started TRAKK and why
+- [Where to Buy](https://trakk.ca/where-to-buy): Retail stores stocking
+  TRAKK socks in Edmonton and St. Albert
+- [Our Story](https://trakk.ca/our-story): Why we started TRAKK and why
   Elk Island came first
-- [FAQ](https://www.trakk.ca/faq): Materials, sizing, care instructions,
+- [Lifestyle](https://trakk.ca/lifestyle): The Elk Island Sock on runs,
+  hikes, and road trips
+- [FAQ](https://trakk.ca/faq): Materials, sizing, care instructions,
   shipping, returns, and who runs the company
-- [Contact](https://www.trakk.ca/contact): Get in touch, including retail
+- [Contact](https://trakk.ca/contact): Get in touch, including retail
   and wholesale inquiries
 
 ## Social

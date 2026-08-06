@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | TRAKK",
   description:
     "How TRAKK collects, uses, and protects your personal information.",
+  alternates: { canonical: "/privacy-policy" },
 };
 
 const sections = [

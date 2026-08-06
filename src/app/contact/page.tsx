@@ -6,6 +6,12 @@ import PageHero from "@/components/PageHero";
 export const metadata: Metadata = {
   title: "Contact | TRAKK",
   description: "Get in touch with the TRAKK team — whether you have a question about your order or you're an artist interested in collaborating with us.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact | TRAKK",
+    description: "Get in touch with the TRAKK team — whether you have a question about your order or you're an artist interested in collaborating with us.",
+    url: "/contact",
+  },
 };
 
 export default function ContactPage() {

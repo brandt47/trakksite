@@ -9,6 +9,13 @@ export const metadata: Metadata = {
   title: "Lifestyle | TRAKK",
   description:
     "Running, hiking, road trips, and everyday adventure — the Elk Island Sock keeps up wherever Jack goes.",
+  alternates: { canonical: "/lifestyle" },
+  openGraph: {
+    title: "Lifestyle | TRAKK",
+    description:
+      "Running, hiking, road trips, and everyday adventure — the Elk Island Sock keeps up wherever Jack goes.",
+    url: "/lifestyle",
+  },
 };
 
 export default function LifestylePage() {

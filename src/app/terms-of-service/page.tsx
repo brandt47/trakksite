@@ -6,6 +6,7 @@ import PageHero from "@/components/PageHero";
 export const metadata: Metadata = {
   title: "Terms of Service | TRAKK",
   description: "Terms and conditions for using the TRAKK website and purchasing our products.",
+  alternates: { canonical: "/terms-of-service" },
 };
 
 const sections = [
