@@ -82,12 +82,13 @@ export default async function ProductPage({
         <section className="relative isolate overflow-hidden bg-forest">
           <div className="absolute inset-0 bg-linear-to-b from-charcoal/70 via-charcoal/40 to-forest" />
           <div className="relative mx-auto grid max-w-7xl items-start gap-8 px-5 pt-24 pb-16 sm:px-10 sm:pt-36 sm:pb-24 lg:grid-cols-2 lg:items-center lg:gap-16 lg:pt-44 lg:pb-28">
-            <div className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-lg">
+            {/* min-w-0 lets the grid item shrink below the image's intrinsic width on narrow screens */}
+            <div className="relative mx-auto w-full min-w-0 max-w-sm sm:max-w-md lg:max-w-lg">
               <div className="absolute -inset-10 -z-10 rounded-full bg-sand/10 blur-3xl" />
               <ProductImageCarousel images={product.images} />
             </div>
 
-            <div className="text-cream">
+            <div className="min-w-0 text-cream">
               <h1 className="font-display text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
                 {product.title}
               </h1>

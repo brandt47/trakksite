@@ -48,18 +48,23 @@ export default function MobileMenu() {
 
       {mounted &&
         createPortal(
-          <div className="md:hidden">
+          // overflow-hidden keeps the off-screen drawer from widening the page
+          <div
+            className={`fixed inset-0 z-50 overflow-hidden md:hidden ${
+              open ? "" : "pointer-events-none"
+            }`}
+          >
             {/* Backdrop */}
             <div
               onClick={() => setOpen(false)}
-              className={`fixed inset-0 z-40 bg-charcoal/80 transition-opacity duration-300 ${
-                open ? "opacity-100" : "pointer-events-none opacity-0"
+              className={`absolute inset-0 bg-charcoal/80 transition-opacity duration-300 ${
+                open ? "opacity-100" : "opacity-0"
               }`}
             />
 
             {/* Drawer */}
             <div
-              className={`fixed inset-y-0 right-0 z-50 flex w-72 flex-col bg-forest shadow-2xl transition-transform duration-300 ease-in-out ${
+              className={`absolute inset-y-0 right-0 flex w-72 flex-col bg-forest shadow-2xl transition-transform duration-300 ease-in-out ${
                 open ? "translate-x-0" : "translate-x-full"
               }`}
             >
