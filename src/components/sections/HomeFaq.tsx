@@ -8,7 +8,7 @@ const faqs = [
   {
     question: "Where is TRAKK based?",
     answer:
-      "TRAKK is based in Edmonton, Alberta. Our socks are designed here and made in Canada. Elk Island is our first design because it's the park down the road.",
+      "TRAKK is based in Edmonton, Alberta, and every sock is designed here. Elk Island is our first design because it's the park down the road.",
   },
   {
     question: "What are TRAKK socks made of?",

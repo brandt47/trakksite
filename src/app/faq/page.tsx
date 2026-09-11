@@ -21,7 +21,7 @@ const faqs = [
   {
     question: "Where is TRAKK based?",
     answer:
-      "TRAKK is based in Edmonton, Alberta. Our socks are designed here and made in Canada. Elk Island is our first design because it's the park down the road.",
+      "TRAKK is based in Edmonton, Alberta, and every sock is designed here. Elk Island is our first design because it's the park down the road.",
   },
   {
     question: "Can I buy TRAKK socks in Edmonton?",
@@ -29,8 +29,9 @@ const faqs = [
       "Right now we're online only, shipping from Edmonton. We're working on getting into local outdoor shops, so check back. If you run a shop in Edmonton and want to stock us, get in touch.",
   },
   {
-    question: "Are TRAKK socks made in Canada?",
-    answer: "Yes. Designed in Edmonton, knit in Canada.",
+    question: "Where are TRAKK socks designed?",
+    answer:
+      "In Edmonton, Alberta. The pattern, the fit, and every revision happen here. Knitting is handled by a manufacturing partner we work with directly on materials and quality.",
   },
   {
     question: "What are TRAKK socks made of?",

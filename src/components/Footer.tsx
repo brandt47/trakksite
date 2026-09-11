@@ -38,7 +38,7 @@ export default function Footer() {
             </p>
             <p className="mt-3 flex items-center gap-2 text-sm text-cream/50">
               <IconMaple className="h-4 w-4 text-clay" />
-              Designed in Edmonton, made in Canada.
+              Designed in Edmonton, Alberta.
             </p>
             <div className="mt-5 flex items-center gap-3">
               {socialLinks.map(({ href, label, Icon }) => (
@@ -109,7 +109,7 @@ export default function Footer() {
             <Link href="/terms-of-service" className="transition hover:text-cream/70">
               Terms of Service
             </Link>
-            <p>Made in Canada, worn everywhere.</p>
+            <p>Designed in Edmonton, worn everywhere.</p>
           </div>
         </div>
 

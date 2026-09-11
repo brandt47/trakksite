@@ -8,8 +8,8 @@ const trustPoints = [
   },
   {
     icon: IconMaple,
-    title: "Canadian made",
-    description: "Designed in a garage in Edmonton, Alberta.",
+    title: "Designed in Edmonton",
+    description: "Every pattern starts in a garage in Edmonton, Alberta.",
   },
   {
     icon: IconShield,
