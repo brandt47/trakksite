@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Hero from "@/components/sections/Hero";
 import FeaturedProducts from "@/components/sections/FeaturedProducts";
+import HomeReviews from "@/components/sections/HomeReviews";
 import MeetTheCao from "@/components/sections/MeetTheCao";
 import HomeFaq from "@/components/sections/HomeFaq";
 import FinalCta from "@/components/sections/FinalCta";
@@ -56,6 +57,7 @@ export default function Home() {
       <main className="flex flex-1 flex-col">
         <Hero />
         <FeaturedProducts />
+        <HomeReviews />
         <MeetTheCao />
         <HomeFaq />
         <FinalCta />

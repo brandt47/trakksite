@@ -2,10 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/lib/products";
 import { IconArrowRight } from "@/components/icons";
+import { RatingBadge } from "@/components/StarRating";
+import { getRatingSummary } from "@/lib/reviews";
 
-export default function ProductCard({ product }: { product: Product }) {
+export default async function ProductCard({ product }: { product: Product }) {
   const { title, subtitle, price, compareAtPrice, currency, images, handle, available } = product;
   const image = images[0];
+  const summary = await getRatingSummary(handle);
 
   return (
     <Link
@@ -30,6 +33,7 @@ export default function ProductCard({ product }: { product: Product }) {
       </div>
       <div className="flex flex-1 flex-col p-5">
         <h3 className="font-display text-lg font-semibold text-cream">{title}</h3>
+        <RatingBadge summary={summary} onDark className="mt-1.5" />
         {subtitle && <p className="mt-1 text-sm text-cream/70">{subtitle}</p>}
         <div className="mt-4 flex items-center justify-between">
           <span className="font-display text-lg text-cream">

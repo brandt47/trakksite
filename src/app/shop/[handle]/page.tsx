@@ -4,7 +4,10 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import AddToCartForm from "@/components/AddToCartForm";
 import ProductImageCarousel from "@/components/ProductImageCarousel";
+import ProductReviews from "@/components/sections/ProductReviews";
+import { RatingBadge } from "@/components/StarRating";
 import { getAllProducts, getProductByHandle } from "@/lib/products";
+import { getProductReviews, summarize } from "@/lib/reviews";
 
 export const revalidate = 60;
 
@@ -50,6 +53,9 @@ export default async function ProductPage({
 
   if (!product) notFound();
 
+  const reviews = await getProductReviews(handle);
+  const summary = summarize(reviews);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -69,6 +75,30 @@ export default async function ProductPage({
         ? "https://schema.org/InStock"
         : "https://schema.org/OutOfStock",
     },
+    // Rich-result ratings must describe only the product on this page, so this
+    // counts the product's own reviews and not the store-wide total.
+    ...(summary.count > 0 && {
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: summary.average.toFixed(1),
+        reviewCount: summary.count,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      review: reviews.slice(0, 10).map((review) => ({
+        "@type": "Review",
+        ...(review.title && { name: review.title }),
+        reviewBody: review.body,
+        datePublished: review.createdAt.slice(0, 10),
+        author: { "@type": "Person", name: review.authorName },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: review.rating,
+          bestRating: 5,
+          worstRating: 1,
+        },
+      })),
+    }),
   };
 
   return (
@@ -92,6 +122,14 @@ export default async function ProductPage({
               <h1 className="font-display text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
                 {product.title}
               </h1>
+              <RatingBadge
+                summary={summary}
+                href="#reviews"
+                size="md"
+                onDark
+                detailed
+                className="mt-3"
+              />
               <p className="mt-4 font-display text-xl text-cream sm:text-2xl">
                 ${product.price.toFixed(2)} {product.currency}
               </p>
@@ -110,6 +148,7 @@ export default async function ProductPage({
           </div>
         </section>
 
+        <ProductReviews handle={handle} />
       </main>
       <Footer />
     </div>
