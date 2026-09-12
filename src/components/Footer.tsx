@@ -38,7 +38,7 @@ export default function Footer() {
             </p>
             <p className="mt-3 flex items-center gap-2 text-sm text-cream/50">
               <IconMaple className="h-4 w-4 text-clay" />
-              Designed in Edmonton, Alberta.
+              Based in Edmonton, Canada.
             </p>
             <div className="mt-5 flex items-center gap-3">
               {socialLinks.map(({ href, label, Icon }) => (
