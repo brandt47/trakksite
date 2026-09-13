@@ -32,7 +32,7 @@ export default function AddToCartForm({ product }: { product: Product }) {
       {hasRealOptions &&
         product.options.map((option) => (
           <div key={option.name} className="mb-5">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-sand">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-stone">
               {option.name}
             </p>
             <div className="flex flex-wrap gap-2">
@@ -45,7 +45,7 @@ export default function AddToCartForm({ product }: { product: Product }) {
                   className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
                     v.id === variantId
                       ? "border-clay bg-clay text-cream"
-                      : "border-cream/30 text-cream/80 hover:border-cream/60"
+                      : "border-stone/30 text-charcoal hover:border-stone/60"
                   } disabled:cursor-not-allowed disabled:opacity-40`}
                 >
                   {v.title}
@@ -56,22 +56,22 @@ export default function AddToCartForm({ product }: { product: Product }) {
         ))}
 
       <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
-        <div className="flex items-center self-start rounded-full border border-cream/30">
+        <div className="flex items-center self-start rounded-full border border-stone/30">
           <button
             type="button"
             onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-            className="flex h-11 w-11 items-center justify-center text-cream transition hover:text-clay-light"
+            className="flex h-11 w-11 items-center justify-center text-charcoal transition hover:text-clay"
             aria-label="Decrease quantity"
           >
             <IconMinus className="h-4 w-4" />
           </button>
-          <span className="w-8 text-center text-sm font-semibold text-cream">
+          <span className="w-8 text-center text-sm font-semibold text-charcoal">
             {quantity}
           </span>
           <button
             type="button"
             onClick={() => setQuantity((q) => q + 1)}
-            className="flex h-11 w-11 items-center justify-center text-cream transition hover:text-clay-light"
+            className="flex h-11 w-11 items-center justify-center text-charcoal transition hover:text-clay"
             aria-label="Increase quantity"
           >
             <IconPlus className="h-4 w-4" />

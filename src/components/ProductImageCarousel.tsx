@@ -20,7 +20,7 @@ export default function ProductImageCarousel({
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="relative overflow-hidden rounded-3xl bg-cream shadow-2xl">
+      <div className="relative overflow-hidden rounded-3xl border border-stone/10 bg-white shadow-lg">
         {images.map((img, i) => (
           <Image
             key={img.src}
@@ -64,7 +64,7 @@ export default function ProductImageCarousel({
               type="button"
               onClick={() => setIndex(i)}
               aria-label={`View image ${i + 1}`}
-              className={`relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border-2 bg-cream transition sm:h-18 sm:w-18 ${
+              className={`relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border-2 bg-white transition sm:h-18 sm:w-18 ${
                 i === index
                   ? "border-clay"
                   : "border-transparent opacity-60 hover:opacity-100"

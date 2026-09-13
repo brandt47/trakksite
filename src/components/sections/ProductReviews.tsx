@@ -7,7 +7,7 @@ export default async function ProductReviews({ handle }: { handle: string }) {
   if (!reviews.length) return null;
 
   return (
-    <section id="reviews" className="scroll-mt-24 bg-cream py-20 sm:py-28">
+    <section id="reviews" className="scroll-mt-24 bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6 sm:px-10">
         <h2 className="font-display text-3xl font-semibold text-charcoal sm:text-4xl">
           What hikers are saying

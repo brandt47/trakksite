@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Caveat, Fraunces, Inter } from "next/font/google";
 import { CartProvider } from "@/lib/cart-context";
-import { CountryProvider } from "@/lib/country-context";
+import AnnouncementBar from "@/components/AnnouncementBar";
 import CartDrawer from "@/components/CartDrawer";
-import { getCountry } from "@/lib/geo";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -64,25 +63,27 @@ export const metadata: Metadata = {
 
 const CLARITY_PROJECT_ID = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const country = await getCountry();
-
   return (
     <html
       lang="en"
       className={`${fraunces.variable} ${inter.variable} ${caveat.variable} h-full antialiased`}
     >
       <body suppressHydrationWarning className="min-h-full flex flex-col bg-cream text-charcoal">
-        <CountryProvider country={country}>
+        <AnnouncementBar />
+        {/* Positioning context for Nav, which floats over each page's hero.
+            Anchoring it here keeps it below the announcement bar instead of
+            overlapping it. */}
+        <div className="relative flex flex-1 flex-col">
           <CartProvider>
             {children}
             <CartDrawer />
           </CartProvider>
-        </CountryProvider>
+        </div>
       </body>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-JMSGHM6LZD"
