@@ -73,6 +73,12 @@ const productEnhancements: Record<
       "Stay-put cuff, no slipping into your boot",
     ],
   },
+  "rock-sock": {
+    subtitle: "Inspired by the crags of The Canadian Rockies",
+  },
+  "northern-lights-sock": {
+    subtitle: "For nights worth staying up for",
+  },
 };
 
 function mapProduct(p: ShopifyProduct): Product {
@@ -138,5 +144,17 @@ export async function getFeaturedProduct(): Promise<Product | null> {
     return await getProductByHandle(FEATURED_PRODUCT_HANDLE);
   } catch {
     return null;
+  }
+}
+
+/**
+ * Products shown in the homepage "Featured Products" grid — currently the
+ * whole catalog. Swallows Shopify errors so the homepage still renders.
+ */
+export async function getFeaturedProducts(): Promise<Product[]> {
+  try {
+    return await getAllProducts();
+  } catch {
+    return [];
   }
 }
