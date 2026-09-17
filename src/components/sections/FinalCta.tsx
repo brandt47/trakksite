@@ -13,13 +13,13 @@ export default async function FinalCta() {
 
       <div className="relative mx-auto max-w-3xl px-6 text-center sm:px-10">
         <h2 className="font-display text-4xl font-semibold leading-tight text-cream sm:text-5xl">
-          {soldOut ? "The first batch is gone." : "Batch two is coming."}
+          {soldOut ? "This batch is gone." : "Stay in the loop."}
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-cream/80">
           {soldOut ? (
             <>
               All 28 pairs found homes. Get on the list and you&rsquo;ll be
-              first to know the moment batch two drops.
+              first to know the moment the next batch drops.
             </>
           ) : (
             <>

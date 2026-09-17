@@ -74,19 +74,6 @@ export default function Footer() {
 
             <div>
               <h3 className="font-display text-sm font-semibold uppercase tracking-wide text-cream">
-                Get Notified
-              </h3>
-              <ul className="mt-4 space-y-2.5 text-sm">
-                <li>
-                  <Link href="/#waitlist" className="transition hover:text-clay-light">
-                    Join the Waitlist
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-display text-sm font-semibold uppercase tracking-wide text-cream">
                 Contact
               </h3>
               <ul className="mt-4 space-y-2.5 text-sm">
