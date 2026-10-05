@@ -1,13 +1,8 @@
 import Image from "next/image";
 import { IconArrowRight } from "@/components/icons";
-import { getFeaturedProduct } from "@/lib/products";
 
-export default async function Hero() {
-  const product = await getFeaturedProduct();
-  // Null (Shopify unreachable) defaults to "available" so we never hide the
-  // buy path — see getFeaturedProduct.
-  const available = product?.available ?? true;
-  const shopHref = product ? `/shop/${product.handle}` : "/shop";
+export default function Hero() {
+  const shopHref = "/shop";
 
   return (
     <section className="relative isolate overflow-hidden bg-forest">
@@ -32,23 +27,13 @@ export default async function Hero() {
             Premium merino wool socks inspired by the places you'll never forget.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
-            {available ? (
-              <a
-                href={shopHref}
-                className="group inline-flex items-center gap-2 rounded-full bg-clay px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-clay-light"
-              >
-                Shop Now
-                <IconArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
-              </a>
-            ) : (
-              <a
-                href="#waitlist"
-                className="group inline-flex items-center gap-2 rounded-full bg-clay px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-clay-light"
-              >
-                Get Notified for Batch Two
-                <IconArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
-              </a>
-            )}
+            <a
+              href={shopHref}
+              className="group inline-flex items-center gap-2 rounded-full bg-clay px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-clay-light"
+            >
+              Shop Now
+              <IconArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+            </a>
           </div>
         </div>
 

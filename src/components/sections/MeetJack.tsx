@@ -11,12 +11,12 @@ export default function MeetJack() {
             Leadership
           </div>
           <h2 className="font-display text-4xl font-semibold leading-tight text-charcoal sm:text-5xl">
-            Under the direction of Jack.
+            Jack is the CEO.
           </h2>
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone">
             <p>
               Trakk was founded in Edmonton in 2025 under the direction of Jack,
-              Chief Adventure Officer. Jack sets the design direction for every
+              Chief Executive Officer. Jack sets the design direction for every
               Trakk release and personally approves each colorway.
             </p>
             <p>
@@ -35,7 +35,7 @@ export default function MeetJack() {
           <div className="aspect-square overflow-hidden rounded-3xl shadow-lg">
             <Image
               src="/images/jack.png"
-              alt="Jack, Chief Adventure Officer"
+              alt="Jack, Chief Executive Officer"
               width={600}
               height={600}
               className="h-full w-full object-cover"
@@ -43,7 +43,7 @@ export default function MeetJack() {
           </div>
           <div className="absolute -bottom-5 -left-5 rounded-2xl bg-charcoal px-5 py-3 text-cream shadow-lg">
             <p className="font-display text-sm font-semibold">Jack</p>
-            <p className="text-xs text-cream/70">Chief Adventure Officer</p>
+            <p className="text-xs text-cream/70">Chief Executive Officer</p>
           </div>
         </div>
       </div>
